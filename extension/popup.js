@@ -1,5 +1,5 @@
 document.getElementById('send').addEventListener('click', async () => {
-    const message = document.getElementById('message').value;
+    const message = document.getElementById('textarea').value;
     const chatContainer = document.getElementById('chat-container');
 
     // User message
@@ -9,7 +9,7 @@ document.getElementById('send').addEventListener('click', async () => {
     chatContainer.appendChild(userMessageDiv);
 
     // Clear textbox
-    document.getElementById('message').value = '';
+    document.getElementById('textarea').value = '';
 
     // Loading message
     const loadingDiv = document.createElement('div');
@@ -51,7 +51,7 @@ document.getElementById('send').addEventListener('click', async () => {
 });
 
 // Enter key binded to send button
-document.getElementById('message').addEventListener('keydown', (event) => {
+document.getElementById('textarea').addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
       event.preventDefault();
       document.getElementById('send').click();

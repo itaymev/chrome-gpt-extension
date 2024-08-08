@@ -1,11 +1,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #333; /* Dark gray background */
-    color: white; /* White text */
+    background-color: #333;
+    color: white;
     margin: 10px;
-    width: 500px; /* Fixed width */
-    height: 600px; /* Fixed height */
-    overflow: hidden; /* Prevent body from scrolling */
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
 }
   
 h1 {
@@ -17,13 +17,13 @@ textarea {
     width: 90%;
     height: 3%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
     font-size: 14px;
     margin-bottom: 10px;
-    background-color: #555; /* Darker gray background for textarea */
-    color: white; /* White text */
+    background-color: #555;
+    color: white;
     overflow-y: auto;
+    resize: vertical;
 }
 
 #chat-container {
@@ -37,7 +37,7 @@ textarea {
 }
   
 button {
-    background-color: #777; /* Lighter gray background for button */
+    background-color: #777;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -47,7 +47,7 @@ button {
 }
   
 button:hover {
-    background-color: #999; /* Even lighter gray on hover */
+    background-color: #999;
 }
   
 #response {
