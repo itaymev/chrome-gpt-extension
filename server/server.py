@@ -3,7 +3,7 @@ from flask_cors import CORS
 from OpenAIConnector import OpenAIConnector
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app)
 connector = OpenAIConnector()
 
 @app.route('/chat', methods=['POST'])
@@ -13,7 +13,6 @@ def chat():
     system_msg = data.get('system_msg', 'You are a helpful assistant. Your responses must be as concise and short as possible. You must only respond in plain text')
     response = connector.run_prompt(prompt, system_msg)
 
-    print(response)
     return jsonify(response)
 
 if __name__ == '__main__':
