@@ -10,7 +10,7 @@ connector = OpenAIConnector()
 def chat():
     data = request.json
     prompt = data.get('prompt')
-    system_msg = data.get('system_msg', 'You are a helpful assistant. You must only respond in plain text')
+    system_msg = data.get('system_msg', 'You are a helpful assistant. Your responses must be as concise and short as possible. You must only respond in plain text')
     response = connector.run_prompt(prompt, system_msg)
 
     print(response)
